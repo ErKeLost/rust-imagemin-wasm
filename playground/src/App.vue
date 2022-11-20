@@ -2,13 +2,21 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
-import * as rust from '../../rust-imagemin/pkg'
-// console.log(rust.get_image_view("1231213"));
-
+import * as init from '../../rust-imagemin/pkg'
+import img from './pink.jpg'
+// console.log(rust.get_image_view('../public/vite.svg'))
+console.log(img)
+const res = init.digest('aaa')
+console.log(res)
+var reader = new FileReader() // 这是核心, 读取操作就是由它完成.
+const imgRes = new Image()
+imgRes.src = img
+console.log(imgRes)
 </script>
 
 <template>
   <div>
+    <img :src="img" width="400" alt="" />
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
