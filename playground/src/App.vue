@@ -2,6 +2,9 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import * as rust from '../../rust-imagemin/pkg'
+// console.log(rust.get_image_view("1231213"));
+
 </script>
 
 <template>

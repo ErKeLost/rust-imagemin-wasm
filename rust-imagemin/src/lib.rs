@@ -8,8 +8,9 @@ extern "C" {
 }
 
 #[wasm_bindgen]
-pub fn get_image_view() {
-    let img = image::open("pink.jpg").unwrap();
-    let (width, height) = img.dimensions();
-    alert(&format!("图片宽度: {:?} 图片高度: {:?}!", width, height));
+pub fn get_image_view(name: &str) {
+    alert(&format!("Hello, {}!", name))
+    // let img = image::open("pink.jpg").unwrap();
+    // let (width, height) = img.dimensions();
+    // alert(&format!("图片宽度: {:?} 图片高度: {:?}!", width, height));
 }
